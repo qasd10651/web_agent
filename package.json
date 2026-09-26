@@ -1,0 +1,23 @@
+{
+  "name": "web_agent",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx esbuild src/index.ts --bundle --format=iife --global-name=WebAgent --outfile=dist/bundle.js --alias:node:zlib=./mock-zlib.js --minify"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "^0.87.1",
+    "@earendil-works/pi-ai": "^0.87.1",
+    "@xterm/xterm": "^6.0.0",
+    "idb": "^8.0.3",
+    "just-bash": "^3.4.2"
+  }
+}
